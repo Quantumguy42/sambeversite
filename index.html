@@ -34,6 +34,8 @@
 
 
     #mainDiv {
+        min-width: 0px;
+
         display:flex;
         flex-shrink: 1;
         flex-direction: column;
@@ -49,13 +51,17 @@
     }
 
     .elt1 {
+        min-width: 0px;
         display:flex;
         flex-shrink: 1;
         justify-content: center;
         align-items: center;
         /* border: 2px solid black; */
     }
-
+    /* #video1 {
+        min-width: 0px;
+        min-height: 0px;
+    } */
     a:link, a:visited {
         color: #38488f;
         text-decoration: none;
@@ -75,7 +81,9 @@
     <p class="elt1">This domain is under construction by our hardworking gibbles. Enjoy watching them work!</p>
     <!-- <p><a href="https://www.iana.org/domains/example">More information...</a></p> -->
      <!-- <img src="" -->
-     <video class="elt1" id="video1" autoplay loop muted  src="media/construct-construction.mp4">A cute green guy building</video>
+    <div class="elt1" id="video-container">
+        <video id="video1" autoplay loop muted  src="media/construct-construction.mp4">A cute green guy building</video>
+    </div>
     
 </div>
 
