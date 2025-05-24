@@ -23,12 +23,13 @@
         justify-content: center;
         align-items: center;
 
-        background-color: #f0f0f2;
+        background-color: #ffffff;
         /* border: 8px solid black; */
         /* margin: 0;
         padding: 0; */
         font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        
+        animation: backgroundColorFade 1s ease-in-out 1500ms forwards;
+
     }
 
 
@@ -47,7 +48,8 @@
         padding: 2em;
         background-color: #fdfdff;
         border-radius: 0.5em;
-        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+        box-shadow: none;
+        animation: shadowFadeIn 1s ease-in-out 1800ms forwards;
     }
 
     .elt1 {
@@ -57,6 +59,9 @@
         justify-content: center;
         align-items: center;
         /* border: 2px solid black; */
+        opacity: 0%;
+        animation: fadeIn 1s ease-in-out 1500ms forwards;
+
     }
     #video1 {
         width: auto;
@@ -75,6 +80,28 @@
             width: auto;
         }
     } */
+
+    /* ANIMATIONS */
+
+    /* Fade in the shadow */
+    @keyframes shadowFadeIn {
+        100% {
+            box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.12);
+        }
+    }
+
+    @keyframes fadeIn {
+        100% {
+            opacity: 100%;
+        }
+    }
+
+    @keyframes backgroundColorFade {
+        100% {
+            background-color: #f0f0f2;
+        }
+    }
+
     </style>    
 </head>
 
